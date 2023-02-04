@@ -1,6 +1,6 @@
 from turtle import Turtle, Screen
-from Day22andDay23.Day22.paddle import Paddle
-from Day22andDay23.Day22.ball import Ball
+from Day22andDay23.Day22_ping_pong_game.paddle import Paddle
+from Day22andDay23.Day22_ping_pong_game.ball import Ball
 from scoreboard import Scoreboard
 import time
 
