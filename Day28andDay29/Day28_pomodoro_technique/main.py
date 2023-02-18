@@ -1,4 +1,5 @@
 from tkinter import *
+from playsound import playsound
 import math
 
 # ---------------------------- CONSTANTS ------------------------------- #
@@ -40,10 +41,12 @@ def start_timer():
 
     elif reps % 8 == 0:
         # If it's the 8th rep:
+        # playsound('the-clock-strickes-twelve-o-clock-nature-sounds-7806.mp3')
         count_down(long_break_sec)
         timer.config(text="Break", fg=RED)
     else:
         # if it's 2nd/4th/6th rep:
+        # playsound('clock-alarm-8761.mp3')
         count_down(short_break_sec)
         timer.config(text="Break", fg=PINK)
 
@@ -57,6 +60,8 @@ def count_down(count):
         count_min = "0" + str(count_min)
     if count_sec < 10:
         count_sec = f"0{count_sec}"
+    if count_sec == 38:
+        playsound('tic-tac-27828.mp3')
     canvas.itemconfig(timer_text, text=f"{count_min}:{count_sec}")
 
     if count > 0:
